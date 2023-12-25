@@ -1,5 +1,4 @@
 pipeline {
-    agent {  }
     tools {
         jdk 'Java'
         maven 'Maven'
@@ -13,6 +12,7 @@ pipeline {
             IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
 	    JENKINS_API_TOKEN = credentials("JENKINS_API_TOKEN")
     }
+    agent any
     stages{
         stage("Cleanup Workspace"){
                 steps {
