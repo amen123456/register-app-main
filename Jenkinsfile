@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'DevOps' }
+    agent {  }
     tools {
         jdk 'Java'
         maven 'Maven'
